@@ -46,7 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Connection\Connection.cs" />
+=======
+    <Compile Include="BEAN\BD_BEAN.cs" />
+    <Compile Include="Connection\Connection.cs" />
+    <Compile Include="DAO\BD_DAO.cs" />
+>>>>>>> 6c3278dd1e2e6a3b8441c6f4c7de1094c0ea9806
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

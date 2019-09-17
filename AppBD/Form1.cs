@@ -210,9 +210,13 @@ namespace AppBD
             {
                 try
                 {
+<<<<<<< HEAD
                     if (MessageBox.Show("Bạn chắc chắn muốn xóa !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         connection.Open();
+=======
+                    connection.Open();
+>>>>>>> 6c3278dd1e2e6a3b8441c6f4c7de1094c0ea9806
                     SqlCommand command = new SqlCommand(sqlEdit, connection);
                     command.Parameters.AddWithValue("MaKH", txtMaKH.Text);
                     command.Parameters.AddWithValue("TenKH", txtTenKH.Text);
@@ -221,6 +225,7 @@ namespace AppBD
                     else
                     {
                         command.Parameters.AddWithValue("GioLay", Convert.ToInt32(txtGioLay.Text));
+<<<<<<< HEAD
                             if (Convert.ToInt32(txtGioLay.Text) < 1 || Convert.ToInt32(txtGioLay.Text) > 23) { MessageBox.Show("Vui lòng nhập giờ (lớn hơn 0 hoặc nhỏ hơn 24)"); }
                             else
                             {
@@ -255,6 +260,41 @@ namespace AppBD
                                         btnTimTheoNgay.Enabled = true;
                                         connection.Close();
                                     }
+=======
+                        if (Convert.ToInt32(txtGioLay.Text) < 1 || Convert.ToInt32(txtGioLay.Text) > 23) { MessageBox.Show("Vui lòng nhập giờ (lớn hơn 0 hoặc nhỏ hơn 24)"); }
+                        else
+                        {
+                            command.Parameters.AddWithValue("NgayLay", dtpNgayLay.Value);
+                            if (checkedIn(txtGia.Text) == 1) { MessageBox.Show("Vui lòng nhập lại đơn giá"); }
+                            else
+                            {
+                                command.Parameters.AddWithValue("DonGia", txtGia.Text);
+                                if (checkedIn(txtSL.Text) == 1) { MessageBox.Show("Vui lòng nhập lại số lượng"); }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("SoLuong", txtSL.Text);
+                                    //command.Parameters.AddWithValue("DonGia*SoLuong", "@DonGia*@SoLuong"  );
+                                    //if (checkedIn(txtSL.Text) == 1||checkedIn(txtGia.Text)==1) { MessageBox.Show("Vui lòng nhập lại số lượng hoặc đơn giá"); }
+                                    // if (KtTrungKhoa(txtMaKH.Text, sqlAdd) == true) { MessageBox.Show("Trùng khóa chính. Vui lòng nhập lại mã KH"); }
+
+
+
+
+                                    command.ExecuteNonQuery();
+
+                                    HienThi();
+                                    resetForm();
+                                    btnThem.Enabled = true;
+                                    btnXem.Enabled = true;
+                                    btnXoa.Enabled = true;
+                                    btnLuu.Enabled = false;
+                                    btnSua.Enabled = true;
+                                    btnLayMa.Enabled = true;
+                                    btnTimTheoTen.Enabled = true;
+                                    btnTimTheoGio.Enabled = true;
+                                    btnTimTheoNgay.Enabled = true;
+                                    connection.Close();
+>>>>>>> 6c3278dd1e2e6a3b8441c6f4c7de1094c0ea9806
                                 }
                             }
                         }

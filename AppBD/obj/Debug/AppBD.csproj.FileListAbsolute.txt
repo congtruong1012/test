@@ -8,6 +8,7 @@ D:\App\AppBD\AppBD\obj\Debug\AppBD.csproj.CoreCompileInputs.cache
 D:\App\AppBD\AppBD\obj\Debug\AppBD.exe
 D:\App\AppBD\AppBD\obj\Debug\AppBD.pdb
 D:\App\AppBD\AppBD\obj\Debug\AppBD.csprojAssemblyReference.cache
+<<<<<<< HEAD
 D:\App\test\AppBD\obj\Debug\AppBD.csprojAssemblyReference.cache
 D:\App\test\AppBD\obj\Debug\AppBD.frmAppBD.resources
 D:\App\test\AppBD\obj\Debug\AppBD.Properties.Resources.resources
@@ -18,3 +19,5 @@ D:\App\test\AppBD\obj\Debug\AppBD.pdb
 D:\App\test\AppBD\bin\Debug\AppBD.exe.config
 D:\App\test\AppBD\bin\Debug\AppBD.exe
 D:\App\test\AppBD\bin\Debug\AppBD.pdb
+=======
+>>>>>>> 6c3278dd1e2e6a3b8441c6f4c7de1094c0ea9806
